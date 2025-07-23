@@ -1009,12 +1009,12 @@ class AmazonConverseConfig(BaseConfig):
             setattr(model_response, "trace", completion_response["trace"])
 
         latency = completion_response.get("metrics", {}).get("latencyMs", 0)
-        sfp = model_response.system_fingerprint;
-        if sfp is None:
-            sfp = f"latency:{latency}"
+        sfp = model_response.id;
+        if id_latency is None:
+            id_latency = f"latency:{latency}"
         else:
-            sfp = f"{sfp}:{latency}"
-        model_response.system_fingerprint = sfp
+            id_latency = f"{id_latency}:{latency}"
+        model_response.id = id_latency
 
         return model_response
 

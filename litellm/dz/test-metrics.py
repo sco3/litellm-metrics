@@ -1,4 +1,5 @@
 import asyncio
+
 import datetime
 import json
 import os
@@ -90,6 +91,6 @@ async def main(repeat, region="us-east-1") -> None:
 
 
 if __name__ == "__main__":
-    asyncio.run(main(1, "eu-west-1"))
-    print("")
-    asyncio.run(main(1, "us-east-1"))
+    asyncio.run(main(3, "eu-west-1"))
+    #print("")
+    #asyncio.run(main(1, "us-east-1"))
